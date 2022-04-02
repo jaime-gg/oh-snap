@@ -19,5 +19,9 @@ describe('Gallery is rendering', () => {
         expect(asFragment()).toMatchSnapshot()
     })
 
+    it('renders', () => {
+        const { getByTestId } = render(<Gallery currentCategory={portrait} />)
+        expect(getByTestId('h1tag')).toHaveTextContent('Portraits')
+    })
 
 })
